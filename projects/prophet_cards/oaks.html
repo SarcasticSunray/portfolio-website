@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dallin H. Oaks</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Molle:ital@1&family=Nanum+Brush+Script&family=Send+Flowers&display=swap');
+        body {
+            background: #FFECD7;
+        }
+        #card {
+            display: flex;
+            flex-direction: column;
+            background: #008db1;
+            border-radius: 20px;
+            border-color: #004e63;
+            border-width: 5px;
+            border-style: solid;
+            align-items: center;
+        }
+        #name {
+            color: #FFFFFE;
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+            font-size: 4em;
+            margin-bottom: 0px;
+            line-height: .5;
+        }
+        #name:hover {
+            color: beige
+        }
+        #description {
+            text-align: center;
+        }
+        #description a{
+            color: #91e4fb;
+            text-decoration: none;
+            font-family: Helvetica, sans-serif;
+            margin-top: 0px;
+        }
+        #description a:hover {
+            color: #55c5e4;
+            text-decoration: underline;
+        }
+        img {
+            border: 8px solid #FFFFFE;
+            border-radius: 3px;
+            height: 350px;
+        }
+        img:hover {
+            border: 8px solid beige;
+        }
+        #facts {
+            color: #FFFFFE;
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        #facts:hover {
+            color: beige;
+        }
+        #quote {
+            color: #ffc547;
+            font-family: "Send Flowers";
+            font-size: 2.3em;
+            text-align: center;
+        }
+        #quote:hover {
+            color: #f3b226;
+        }
+        #card {
+            width: 500px;
+            justify-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="card">
+        <h1 id="name">Dallin H. Oaks</h1>
+        <h2 id="description"><a href="https://www.churchofjesuschrist.org">18th president of the Church of Jesus Christ of Latter-day Saints</a></h2>
+        <section id="image"><img src="images/oaks.webp" alt="President Oaks"></section>
+        <ul id="facts">
+            <li>Born: Aug 12, 1932</li>
+            <li>Apostle: Apr 7, 1984</li>
+            <li>Prophet: Oct 14, 2025</li>
+        </ul>
+        <p id="quote"><strong>"The only permanent solution to the differences that divide us is for all of us to 
+            follow our Savior's teachings and to gradually become even as He is."</strong></p>
+    </div>
+</body>
+</html>

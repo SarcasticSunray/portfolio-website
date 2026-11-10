@@ -1,0 +1,41 @@
+body {
+	background-color: #f0f0f0;
+}
+h1 {
+	color: blue;
+	text-align: center;
+	margin-right: 30%;
+	margin-left: 30%;
+	border-width: 5px;
+	border-style: solid;
+	border-radius: 8px;
+}
+footer p {
+	font-size: 15px;
+	border: solid 5px yellow;
+	border-radius: 50%;
+	display: inline;
+}
+p {
+	font-size: 25px;
+	line-height: 80px;
+}
+p:hover {
+	text-decoration: overline;
+	text-decoration-color: aqua;
+	text-decoration-style: dashed;
+}
+#orange:hover {
+	font-weight: 300px;
+}
+.rats {
+	color: green;
+}
+#orange {
+	color: orange;
+	font-weight: bold;
+}
+#main-paragraph {
+	font-size: 20px;
+	margin: 0px;
+}

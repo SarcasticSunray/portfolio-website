@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Send+Flowers&display=swap');
+
+:root {
+  --first-color: #171219;
+  --second-color: #225560;
+  --third-color: #5EF38C;
+  --fourth-color: #2B9720;
+  --fifth-color: #F0803C;
+
+  /*These points center the octogon on my face*/
+  --x0: 12.5%;
+  --x1: 31.94%;
+  --x2: 65.28%;
+  --x3: 84.72%;
+  /*The height should be about 406px (with a width locked to 360px) based on the aspect ratio, assuming that I'm not terrible at math. Which is a bad assumption.*/
+  --y0: 11.08%;
+  --y1: 28.33%;
+  --y2: 57.88%;
+  --y3: 75.12%;
+
+  --block-rounding: 35px;
+  --block-divider-height: 7px;
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--first-color);
+    color: var(--first-color);
+    max-width: 1800px;
+    margin: 0 auto;
+    font-family: Dongle, sans-serif;
+    border-left: var(--block-divider-height) solid var(--first-color);
+    border-right: var(--block-divider-height) solid var(--first-color);
+    min-height: 100vh;
+}
+
+/*Header / nav (nav is the only thing in the header)*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--fourth-color);
+    line-height: 2em;
+    border-bottom-left-radius: var(--block-rounding);
+    border-bottom-right-radius: var(--block-rounding);
+}
+
+nav a {
+    text-align: center;
+    font-family: "Send Flowers", cursive;
+    font-size: 1.5em;
+    background-color: var(--third-color);
+    border-radius: 7px;
+    margin: 10px;
+    padding: 5px 30px;
+    text-decoration: none;
+    color: var(--first-color)
+}
+
+nav a:hover {
+    background-color: var(--fifth-color);
+    text-decoration: underline wavy var(--first-color) 1px;
+}
+
+/*About me section, only on the main page.*/
+#about-me {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2fr;
+    border-top: var(--block-divider-height) solid var(--first-color);
+    border-radius: var(--block-rounding);
+    background-color: var(--second-color);
+    color: white;
+    font-size: 2em;
+}
+
+#about-me #box-one {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#about-me #name {
+    text-align: center;
+    margin: 0;
+}
+
+#border-div {
+    background-color: var(--fifth-color);
+    width: 374px;
+    height: 422px;
+    clip-path: polygon(var(--x0) var(--y1), var(--x0) var(--y2), var(--x1) var(--y3), var(--x2) var(--y3), var(--x3) var(--y2), var(--x3) var(--y1), var(--x2) var(--y0), var(--x1) var(--y0));
+    justify-self: center;
+}
+
+#headshot{
+    width: 360px;
+    height: 406px;
+    display: block;
+    clip-path: polygon(var(--x0) var(--y1), var(--x0) var(--y2), var(--x1) var(--y3), var(--x2) var(--y3), var(--x3) var(--y2), var(--x3) var(--y1), var(--x2) var(--y0), var(--x1) var(--y0));
+    margin-left: 7px;
+    margin-top: 7px;
+}
+
+#certifications {
+    margin-left: 20px;
+}
+
+#certifications h2 {
+    margin: 0;
+}
+
+#certifications ul {
+    margin: 0;
+}
+
+#certifications img {
+    width: 100px;
+}
+
+/*Here's the styling for the repeating pattern of boxes.*/
+.project {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    text-align: center;
+    border-top: var(--block-divider-height) solid var(--first-color);
+    border-radius: var(--block-rounding);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.project:nth-child(odd) {
+    background-color: var(--third-color);
+}
+
+.project:nth-child(even) {
+    background-color: var(--fourth-color);
+}
+
+.project a{
+    grid-column: 1/4;
+}
+
+.project a img {
+    width: 80%;
+    margin: auto;
+    border: 5px solid var(--fifth-color);
+    border-radius: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(232, 234, 236);
+    transform: scale(100%);
+    transition-duration: .5s;
+}
+
+.project a img:hover {
+    border-color: #ffd429;
+    transform: scale(105%);
+    transition-duration: .5s;
+}
+
+.project h1 {
+    display: block;
+    grid-column: 1/8;
+    font-family: "Send Flowers", cursive;
+    font-size: 4em;
+    margin: 10px;
+    justify-self: center;
+    word-spacing: 10px;
+}
+
+.project h2 {
+    grid-column: 8/9;
+    font-size: 2em;
+    color: var(--second-color);
+}
+
+.project p {
+    grid-column: 4/9;
+    font-size: 2em;
+    margin: 5%;
+    text-align: left;
+}
+
+/*Stuff for the footer now*/
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--second-color);
+    width: 100%;
+    border-top: var(--block-divider-height) solid var(--first-color);
+    border-top-left-radius: var(--block-rounding);
+    border-top-right-radius: var(--block-rounding);
+    margin-bottom: 0px;
+}
+
+footer img {
+    width: 80px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+#flexGrow {
+    flex-grow: 1;
+}
+
+#contactMe {
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+}
+
+#contactMe h1 {
+    font-size: 2.2em;
+    transform: rotate(270deg);
+    margin-right: -60px;
+    color: var(--fifth-color)
+}
+
+footer input, footer textarea {
+    font-size: 1.2em;
+    font-family: inherit;
+    width: 250px;
+}
