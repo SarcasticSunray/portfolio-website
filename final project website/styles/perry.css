@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /*A Platapus Palette?*/
+    --body: #00b3b2;
+    --dark-body: #008083;
+    --beak: #fcb242;
+    --tail: #f9a565;
+    --dark-tail: #fd5900;
+    --border: #243d3d;
+    /*A Perry the Platypus Palette!?!?*/
+    --hat: #834e27;
+    --hat-band: #523b3c;
+}
+
+body {
+    background-color: var(--light-teal);
+    font-family: "Roboto";
+    color: var(--hat);
+    display: flex;
+    font-size: 8em;
+}
+
+body a {
+    color: var(--highlight-color);
+}

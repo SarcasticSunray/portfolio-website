@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+	background: beige;
+}
+.btn {
+  border: none;
+  color: white;
+  padding: 4em 2em;
+  font-size: 4em;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: scale(1,1);
+  transition-duration: .75s;
+  transition-delay: 10ms;
+}
+
+.btn:hover {
+  transform: scale(-1,1);
+  transition-duration: .75s;
+  transition-delay: 100ms;
+}
+
+.success::after {
+	justify-content: center;
+	display: flex;
+	content: "Success";
+	transform: rotateX(180deg);
+}
+.info::after {
+	justify-content: center;
+	display: flex;
+	content: "Info";
+	transform: rotateX(180deg);
+}
+.warning::after {
+	justify-content: center;
+	display: flex;
+	content: "Warning";
+	transform: rotateX(180deg);
+}
+.danger::after {
+	justify-content: center;
+	display: flex;
+	content: "Danger";
+	transform: rotateX(180deg);
+}
+.default::after {
+	justify-content: center;
+	display: flex;
+	content: "Default";
+	transform: rotateX(180deg);
+}
+#buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+}
+
+.success {background-color: #04AA6D;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+.danger {background-color: #f44336;} /* Red */ 
+.danger:hover {background: #da190b;}
+
+.default {background-color: #e7e7e7; color: black;} /* Gray */ 
+.default:hover {background: #ddd;}
+</style>
+</head>
+	<body>
+		<h1>Alert Buttons</h1>
+		<div id="buttons">
+			<button class="btn success">Success</button>
+			<button class="btn info">Info</button>
+			<button class="btn warning">Warning</button>
+			<button class="btn danger">Danger</button>
+			<button class="btn default">Default</button>
+		</div>
+	</body>
+</html>
