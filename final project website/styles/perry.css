@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+    font-family: "Ferbtastic";
+    src: url("../fonts/Phineas\ y\ Ferb.ttf") format("truetype");
+}
+
 :root {
     /*A Platapus Palette?*/
     --body: #00b3b2;
@@ -15,10 +20,10 @@
 
 body {
     background-color: var(--light-teal);
-    font-family: "Roboto";
+    font-family: "Ferbtastic";
     color: var(--hat);
     display: flex;
-    font-size: 8em;
+    flex-direction: column;
 }
 
 body a {
