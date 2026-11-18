@@ -44,6 +44,7 @@ body {
 nav {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     background-color: var(--fourth-color);
     line-height: 2em;
     border-bottom-left-radius: var(--block-rounding);
@@ -109,11 +110,7 @@ nav a:hover {
     margin-left: 20px;
 }
 
-#certifications h2 {
-    margin: 0;
-}
-
-#certifications ul {
+#certifications h2, #certifications ul {
     margin: 0;
 }
 
@@ -190,6 +187,7 @@ nav a:hover {
 footer {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     background-color: var(--second-color);
     width: 100%;
     border-top: var(--block-divider-height) solid var(--first-color);
@@ -225,4 +223,19 @@ footer input, footer textarea {
     font-size: 1.2em;
     font-family: inherit;
     width: 250px;
+}
+
+@media (max-width: 800px) {
+    #about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project {
+        display: flex;
+        flex-direction: column;
+    }
+    .project a img {
+        width: 100%;
+    }
 }
